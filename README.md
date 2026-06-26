@@ -1,4 +1,4 @@
-# Proyecto Ticketería - Cencosud 🎫
+# Proyecto Ticketería - Cencosud 
 
 Sistema web de gestión de incidencias. Desarrollado con **React (Vite)** para el panel visual (Frontend) y **Django REST Framework** para la base de datos (Backend).
 
@@ -24,7 +24,7 @@ Abre una terminal en la carpeta de tu backend y ejecuta estos comandos en orden:
 
 ---
 
-## 💻 2. Cómo ejecutar el Frontend (React)
+##  2. Cómo ejecutar el Frontend (React)
 
 Abre **otra terminal nueva** en la carpeta de tu frontend y ejecuta:
 
@@ -40,4 +40,4 @@ Abre **otra terminal nueva** en la carpeta de tu frontend y ejecuta:
 
 ---
 
-⚠️ **IMPORTANTE:** Para que la plataforma funcione al 100% (crear y eliminar tickets), **ambos servidores deben estar corriendo al mismo tiempo** en dos terminales separadas.
+ **IMPORTANTE:** Para que la plataforma funcione al 100% (crear y eliminar tickets), **ambos servidores deben estar corriendo al mismo tiempo** en dos terminales separadas.
