@@ -10,6 +10,7 @@ Abre una terminal en la carpeta de tu backend y ejecuta estos comandos en orden:
 
 1. **Instalar las librerías necesarias:**
    ```bash
+   pip install django djangorestframework django-cors-headers
    ```
 2. **Preparar la base de datos:**
    ```bash
