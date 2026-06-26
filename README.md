@@ -1,4 +1,4 @@
-# Proyecto Ticketeria - Cencosud 🎫
+# Proyecto Ticketeria - Cencosud 
 
 Sistema web de gestión de incidencias. Desarrollado con **React (Vite)** para el panel visual (Frontend) y **Django REST Framework** para la base de datos (Backend).
 
@@ -8,16 +8,20 @@ Sistema web de gestión de incidencias. Desarrollado con **React (Vite)** para e
 
 Abre una terminal en la carpeta de tu backend y ejecuta estos comandos en orden:
 
-1. Instalar las librerías necesarias:
+1. Crear y activar el entorno virtual (Windows):
+`python -m venv venv`
+`venv\Scripts\activate`
+
+2. Instalar las librerías necesarias:
 `pip install django djangorestframework django-cors-headers`
 
-2. Preparar la base de datos:
+3. Preparar la base de datos:
 `python manage.py migrate`
 
-3. Encender el servidor:
+4. Encender el servidor:
 `python manage.py runserver`
 
-### 🔗 URLs del Backend (API de Django)
+###  URLs del Backend (API de Django)
 * **Ruta General de la API:** http://127.0.0.1:8000/api/tickets/
 * **Ruta Específica de la API:** http://127.0.0.1:8000/api/tickets/{id}/
 * **Panel Nativo de Django:** http://127.0.0.1:8000/admin/
@@ -34,7 +38,7 @@ Abre **otra terminal nueva** en la carpeta de tu frontend y ejecuta:
 2. Encender la página web:
 `npm run dev`
 
-### 🔗 URLs del Frontend (Páginas Visuales)
+###  URLs del Frontend (Páginas Visuales)
 * **Página de Inicio (Home):** http://localhost:5173/
 * **Inicio de Sesión (Login):** http://localhost:5173/LoginPage
 * **Formulario de Creación:** http://localhost:5173/CrearTicketPage
