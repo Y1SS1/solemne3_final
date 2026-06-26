@@ -1,0 +1,262 @@
+@import "./variables";
+@import "./mixins";
+
+.admin-dashboard {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto; // Centra todo el contenido de la página
+
+  h1 {
+    text-align: center;
+    color: $color-principal;
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+
+  // Sección de botones de filtros centrada y vistosa
+  .consultas-container {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      color: $color-secundario;
+      margin-bottom: 20px;
+    }
+
+    .btn-group {
+      display: inline-flex;
+      background: white;
+      padding: 6px;
+      border-radius: 12px;
+      box-shadow: $box-shadow-general;
+
+      button {
+        padding: 12px 25px;
+        border: none;
+        background: transparent;
+        border-radius: 8px;
+        font-weight: bold;
+        color: $color-secundario;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background: #f0f4f8;
+        }
+
+        &.active {
+          background: $color-principal;
+          color: white;
+          box-shadow: 0 4px 8px rgba(0, 59, 113, 0.3);
+        }
+      }
+    }
+  }
+
+  // Contenedor principal de la tabla
+  .tickets-gestion {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: $box-shadow-general;
+    margin-top: 20px;
+
+    h2 {
+      color: $color-principal;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 10px;
+      overflow: hidden; // Redondea las esquinas superiores de los headers
+
+      thead {
+        background-color: $color-principal;
+        color: white;
+
+        th {
+          padding: 16px;
+          text-align: left;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 14px;
+          letter-spacing: 0.5px;
+        }
+      }
+
+      tbody {
+        tr {
+          transition: all 0.2s ease;
+          
+          &:hover {
+            background-color: #f8fafc;
+            transform: scale(1.002);
+          }
+
+          td {
+            padding: 16px;
+            color: $color-texto;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: middle;
+          }
+
+          // Quita el borde inferior de la última fila
+          &:last-child td {
+            border-bottom: none;
+          }
+        }
+      }
+
+      // Etiquetas visuales para la prioridad (pill shape)
+      .badge {
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        display: inline-block;
+
+        &.rojo { 
+          background-color: #fee2e2; 
+          color: #ef4444; 
+          border: 1px solid #ef4444;
+        }
+        &.amarillo { 
+          background-color: #fef9c3; 
+          color: #ca8a04; 
+          border: 1px solid #ca8a04;
+        }
+        &.verde { 
+          background-color: #dcfce7; 
+          color: #22c55e; 
+          border: 1px solid #22c55e;
+        }
+      }
+
+      // Botón de acción en la tabla
+      .btn-resolver {
+        @include boton;
+        background-color: $color-hover;
+        color: white;
+        padding: 8px 16px;
+        font-size: 13px;
+        
+        &:hover {
+          background-color: $color-principal;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
+
+// Ventana emergente (Modal) para enviar mensaje al técnico
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: modalFadeIn 0.3s ease;
+
+  h3 {
+    color: $color-principal;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-texto;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: $color-secundario;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+    &:focus {
+      outline: none;
+      border-color: $color-principal;
+      box-shadow: 0 0 0 3px rgba(0, 59, 113, 0.1);
+    }
+  }
+
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-cancelar {
+      background: #e2e8f0;
+      color: #475569;
+      border: none;
+
+      &:hover {
+        background: #cbd5e1;
+      }
+    }
+
+    .btn-enviar {
+      background: $color-principal;
+      color: white;
+      border: none;
+
+      &:hover {
+        background: $color-hover;
+      }
+    }
+  }
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,32 @@
+.detalle-ticket {
+  padding: 30px;
+
+  .ticket-card {
+    max-width: 600px;
+    margin: auto;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .ticket-card {
+    width: 90%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .ticket-card {
+    width: 100%;
+    padding: 15px;
+  }
+}
