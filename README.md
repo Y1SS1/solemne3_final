@@ -4,7 +4,7 @@ Sistema web de gestión de incidencias. Desarrollado con **React (Vite)** para e
 
 ---
 
-## ⚙️ 1. Cómo ejecutar el Backend (Django)
+##  1. Cómo ejecutar el Backend (Django)
 
 Abre una terminal en la carpeta de tu backend y ejecuta estos comandos en orden:
 
