@@ -8,18 +8,38 @@ Sistema web de gestión de incidencias. Desarrollado con **React (Vite)** para e
 
 Abre una terminal en la carpeta de tu backend y ejecuta estos comandos en orden:
 
-1. Crear y activar el entorno virtual (Windows):
+# Proyecto Ticketeria - Cencosud 
+
+Sistema web de gestión de incidencias. Desarrollado con **React (Vite)** para el panel visual (Frontend) y **Django REST Framework** para la base de datos (Backend).
+
+---
+
+##  1. Cómo ejecutar el Backend (Django)
+
+Abre una terminal en la carpeta de tu backend y ejecuta estos comandos en orden:
+
+1. Posicionarse en la carpeta correspondiente al servidor usando algo parecida a 'cd Backend_ticketeria'
+
+2. Crear y activar el entorno virtual (Windows):
 `python -m venv venv`
 `venv\Scripts\activate`
 
-2. Instalar las librerías necesarias:
-`pip install django djangorestframework django-cors-headers`
+3. Instalar las dependencias:
+`pip install django djangorestframework django-cors-headers drf-spectacular`
 
-3. Preparar la base de datos:
+4. Generar la base de datos :
 `python manage.py migrate`
 
-4. Encender el servidor:
+5. Levantar el Servidor Completo 
 `python manage.py runserver`
+
+###  URLs del Backend (API de Django)
+* **Ruta General de la API:** http://127.0.0.1:8000/api/tickets/
+* **Ruta Específica de la API:** http://127.0.0.1:8000/api/tickets/{id}/
+* **Panel Nativo de Django:** http://127.0.0.1:8000/admin/
+
+---
+
 
 ###  URLs del Backend (API de Django)
 * **Ruta General de la API:** http://127.0.0.1:8000/api/tickets/
