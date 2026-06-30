@@ -18,19 +18,20 @@ Sistema web de gestión de incidencias. Desarrollado con **React (Vite)** para e
 
 Abre una terminal en la carpeta de tu backend y ejecuta estos comandos en orden:
 
-1. Posicionarse en la carpeta correspondiente al servidor usando algo parecida a 'cd Backend_ticketeria'
+1. Posicionarse en la carpeta correspondiente al servidor usando algo parecida a
+   'cd Backend_ticketeria'
 
-2. Crear y activar el entorno virtual (Windows):
+3. Crear y activar el entorno virtual (Windows):
 `python -m venv venv`
 `venv\Scripts\activate`
 
-3. Instalar las dependencias:
+4. Instalar las dependencias:
 `pip install django djangorestframework django-cors-headers drf-spectacular`
 
-4. Generar la base de datos :
+5. Generar la base de datos :
 `python manage.py migrate`
 
-5. Levantar el Servidor Completo 
+6. Levantar el Servidor Completo 
 `python manage.py runserver`
 
 ###  URLs del Backend (API de Django)
