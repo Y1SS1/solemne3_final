@@ -19,7 +19,7 @@ Sistema web de gestión de incidencias. Desarrollado con **React (Vite)** para e
 Abre una terminal en la carpeta de tu backend y ejecuta estos comandos en orden:
 
 1. Posicionarse en la carpeta correspondiente al servidor usando algo parecida a
-   'cd Backend_ticketeria'
+   `cd Backend_ticketeria`
 
 3. Crear y activar el entorno virtual (Windows):
 `python -m venv venv`
